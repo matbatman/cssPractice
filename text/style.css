@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Russo One', sans-serif;
+    background: black;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1{
+    color: black;
+    font-size: 100px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    animation: animate linear 2000ms infinite;
+}
+
+@keyframes animate{
+    0%{
+        text-shadow:
+        4px -4px #42aaff,
+        3px -3px 0 #42aaff,
+        2px -2px 0 #42aaff,
+        1px -1px 0 #42aaff,
+        -4px 4px 0 orange,
+        -3px 3px 0 orange,
+        -2px 2px 0 orange,
+        -1px 1px 0 orange;
+        
+    }
+    25%{
+        text-shadow:
+        -4px -4px 0 orange,
+        -3px -3px 0 orange,
+        -2px -2px 0 orange,
+        -1px -1px 0 orange,
+        4px 4px 0 #42aaff,
+        3px 3px 0 #42aaff,
+        2px 2px 0 #42aaff,
+        1px 1px 0 #42aaff;
+    }
+    75%{
+        text-shadow:
+        4px 4px 0 orange,
+        3px 3px 0 orange,
+        2px 2px 0 orange,
+        1px 1px 0 orange,
+        -4px -4px 0 #42aaff,
+        -3px -3px 0 #42aaff,
+        -2px -2px 0 #42aaff,
+        -1px -1px 0 #42aaff;
+    }
+    100%{
+        text-shadow:
+        4px -4px 0 #42aaff,
+        3px -3px 0 #42aaff,
+        2px -2px 0 #42aaff,
+        1px -1px 0 #42aaff,
+        -4px 4px 0 orange,
+        -3px 3px 0 orange,
+        -2px 2px 0 orange,
+        -1px 1px 0 orange;
+    }
+}
