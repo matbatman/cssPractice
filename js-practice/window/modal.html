@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Модальное окно</title>
+</head>
+
+<body>
+    <!--Диалог с формой-->
+    <dialog id="dial">
+        <form method="dialog">
+            <p><label>Любимая марка машины:
+                    <select>
+                        <option></option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>
+                </label></p>
+            <menu>
+                <button value="cancel">Отмена</button>
+                <button id="confBtn" value="default">Выбрать</button>
+            </menu>
+        </form>
+    </dialog>
+    <menu>
+        <button id="choose"> Выбрать марку</button>
+    </menu>
+    <output aria-live="polite"></output>
+
+<script>
+    let choose = document.getElementById('choose')
+    let favD = document.getElementById('dial')
+    let box = document.querySelector('output')
+    let select = document.querySelector('select')
+    let confirm = document.getElementById('confBtn')
+
+    choose.addEventListener('click', function onOpen(){
+        if(typeof favD.showModal === "function"){
+            favD.showModal()
+        }else{
+            alert('Тег <dialg> не поддерживается')
+        }
+    })
+
+    select.addEventListener('change', function onSelect(e){
+        confirm.value = select.value
+    })
+
+    favD.addEventListener('close', function onClose(){
+        box.value = favD.returnValue + ' выбрано - ' + (new Date()).toString()
+    })
+</script>
+</body>
+
+</html>

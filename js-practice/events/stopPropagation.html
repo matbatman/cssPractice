@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Проверка событий</title>
+    <script>
+        function f_alerts(s, e) {
+            e = e || window.event
+            e.stopPropagation()
+            alert(s)
+        }
+    </script>
+</head>
+
+<body onclick="f_alerts('onclick for Doc', event)">
+    <p onclick="f_alerts('onclick for p', event)">Щелк
+        <span style="color: blueviolet;" onclick="f_alerts('onclick for span', event)">
+            тут
+        </span>
+    </p>
+</body>
+
+</html>

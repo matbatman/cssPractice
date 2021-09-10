@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ONE</title>
+</head>
+
+<body>
+    <form>
+        <input type="button" value="Показать" onclick="openAlert()">
+    </form>
+    <script language="JavaScript">
+        // if (window.confirm("Нажмите ОК или Отмена")) {
+        //     console.log("Нажали ОК")
+        // } else {
+        //     console.log("Нажали Отмена")
+        // }
+
+        let UName = window.prompt("Введите данные", "NoName");
+        if(UName === null){
+            alert("Пока")
+        }else{
+            document.write("Ку, " + UName)
+        }
+
+        function openAlert() {
+            window.alert('Такой базы нет в сервисе \n по вопросам обратитесь к @victoria.matyushina')
+        }
+    </script>
+</body>
+
+</html>
