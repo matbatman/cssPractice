@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Forms</title>
+</head>
+
+<body>
+    <script>
+        function addWord() {
+            let text1 = document.form1.text1.value
+
+            if (text1 == "") { windows.alert('Введите текст'); return "" }
+
+            let ta1 = document.form1.ta1.value
+            let result = ta1 + '\n' + text1
+
+            document.form1.ta1.value = result
+
+            document.form1.text1.value = ""
+            return text1
+        }
+    </script>
+
+    <form name="form1">
+        Слово <input type="text" name="text1" id="text1"><br>
+        <textarea name="ta1" id="ta1" cols="30" rows="3"></textarea><br>
+        <input type="button" value="Добавить в список" onclick="addWord()"><br>
+    </form>
+</body>
+
+</html>

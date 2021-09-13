@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Формы</title>
+    </head>
+    <script>
+        function onBtnClick() {
+            document.form1.button2.disabled = !document.form1.button2.disabled
+        }
+    </script>
+    <body>
+        <form name="form1">
+            <input type="button" name="button1" id="button1" value="Кнопка 1" onclick="onBtnClick()"> <br>
+            <input type="button" name="button2" id="button2" value="Кнопка 2" onclick="onBtnClick()"> <br>
+        </form>
+    </body>
+</html>
