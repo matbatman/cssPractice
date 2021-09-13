@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Таймеры</title>
+    <script>
+        let clock
+        function timeStart() {
+            clock = setInterval("displayTime()", 1000)
+        }
+
+        function displayTime() {
+            let d = new Date()
+            let currTime = (d.getHours() < 10) ? "0" : ""
+            currTime += d.getHours()
+            currTime += (d.getMinutes() < 10) ? "0" : ":"
+            currTime += d.getMinutes()
+            currTime += (d.getSeconds() < 10) ? "0" : ":"
+            currTime += d.getSeconds()
+            document.getElementById("div1").innerHTML = currTime
+        }
+
+        function timeStop() {
+            clearInterval(clock)
+        }
+    </script>
+</head>
+<body>
+    <div id="div1"></div>
+
+    <input type="button" value="Start" onclick="timeStart()">
+    <input type="button" value="Stop" onclick="timeStop()">
+</body>
+</html>

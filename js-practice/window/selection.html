@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Выделение</title>
+    </head>
+    <body>
+        <script>
+            function onClick() {
+                let setText = window.getSelection().toString()
+                console.log(setText)
+            }
+        </script>
+        <div id="div1">Выделите текст и нажмите копку</div>
+        <p><input type="button" onclick="onClick()" value="Нажми меня"></p>
+    </body>
+</html>
