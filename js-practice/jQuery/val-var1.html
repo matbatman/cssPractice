@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>val-var1</title>
+</head>
+<body>
+<input id="inp1" type="text" value="Name">
+<button id="b1">Get value</button>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(function (){
+        $("#b1").click(function (){
+            let value = $("#inp1").val()
+            console.log(value)
+        })
+    })
+</script>
+</body>
+</html>

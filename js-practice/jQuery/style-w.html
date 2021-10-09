@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>style-w</title>
+    <style type="text/css">
+        div{border: 2px solid red}
+        .cl1{background-color: aquamarine; color: aliceblue}
+    </style>
+</head>
+<body>
+<div>block 1</div>
+<div>block 2</div>
+<div>block 3</div>
+
+<button id="b1">Add class</button>
+<button id="b2">Dell class</button>
+<button id="b3">Switch class</button>
+<button id="b4">Check class</button>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(function (){
+        $("#b1").click(function (){
+            $("div").addClass("cl1")
+        });
+
+        $("#b2").click(function (){
+            $("div").removeClass("cl1")
+        });
+
+        $("#b3").click(function (){
+            $("div").toggleClass("cl1")
+        });
+
+        $("#b4").click(function (){
+            alert($("div").hasClass("cl1"))
+        });
+    })
+</script>
+</body>
+</html>

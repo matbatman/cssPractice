@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>val-var2</title>
+</head>
+<body>
+<p>Checkboxes:</p>
+    <input type="radio" name="pet" value="dog">Dog
+    <input type="radio" name="pet" value="cat">Cat
+    <button id="b1">Result</button>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(function (){
+        $("#b1").click(function (){
+            let value = $("input:radio[name=pet]:checked").val()
+            window.alert(value)
+        })
+    })
+</script>
+</body>
+</html>

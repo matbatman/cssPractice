@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"; http-equiv="Content-Type" content="text/html">
+    <title>fade to</title>
+    <style>
+        div{ border: 1px dotted #379; padding: 5px; color: coral}
+    </style>
+</head>
+<body>
+<button>Go</button>
+<p>
+    Википе́дия — общедоступная многоязычная универсальная интернет-энциклопедия со свободным контентом, реализованная на
+    принципах вики. Расположена по адресу wikipedia.org. Владелец сайта — американская некоммерческая организация
+    «Фонд Викимедиа», имеющая 37 региональных представительств.
+</p>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(function (){
+        $("button").one("click", function (){
+            $("p:first").fadeTo("slow",0.30,function (){
+                console.log("Done")
+            })
+        })
+    })
+</script>
+</body>
+</html>

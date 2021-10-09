@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fade</title>
+</head>
+<body>
+<button id="hide">Hide</button>
+<button id="show">Show</button>
+<button id="toggle">Toggle</button>
+
+<p><div id="text">
+    Википе́дия — общедоступная многоязычная универсальная интернет-энциклопедия со свободным контентом, реализованная на
+    принципах вики. Расположена по адресу wikipedia.org. Владелец сайта — американская некоммерческая организация
+    «Фонд Викимедиа», имеющая 37 региональных представительств.
+</div></p>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(function (){
+        $("#hide").click(function (){
+            $("#text").fadeOut(1500)
+        })
+
+        $("#show").click(function (){
+            $("#text").fadeIn(1500)
+        })
+
+        $("#toggle").click(function (){
+            $("#text").fadeToggle(1500)
+        })
+    })
+</script>
+</body>
+</html>
